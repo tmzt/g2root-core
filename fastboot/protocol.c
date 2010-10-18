@@ -53,6 +53,7 @@ static int check_response(usb_handle *usb, unsigned size,
             usb_close(usb);
             return -1;
         }
+	fprintf(stderr, "STATUS: %s\n", status);
         status[r] = 0;
 
         if(r < 4) {
@@ -116,6 +117,7 @@ static int _command_send(usb_handle *usb, const char *cmd,
         return -1;
     }
 
+    fprintf(stderr, "sending command: %s\n", cmd);
     if(usb_write(usb, cmd, cmdsize) != cmdsize) {
         sprintf(ERROR,"command write failed (%s)", strerror(errno));
         usb_close(usb);

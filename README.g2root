@@ -1,0 +1,7 @@
+added build scripts from http://git.freesmartphone.org/?p=utilities.git;a=blob_plain;f=android/image-utils/fastboot/Makefile.am;h=4cc1d69b926464ea37c15cacb873b37671b2a90a;hb=master
+
+use autoconf/automake if you don't want to use the android build system
+
+./autogen.sh
+
+--tmzt
